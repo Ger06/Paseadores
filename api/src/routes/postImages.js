@@ -34,7 +34,7 @@ router.post("/:id",  async (req,res)=>{
         userId: id
     })
     await fs.unlink(req.file.path)
-    res.redirect(`${frontURL}/walker/perfil/`+id)
+    res.status(204).send()
     } catch (error) {
         console.log(error)
     }
