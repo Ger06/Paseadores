@@ -34,7 +34,7 @@ router.post("/:id",  async (req,res)=>{
         userId: id
     })
     await fs.unlink(req.file.path)
-    res.redirect(`https://happy-dogs.vercel.app/walker/perfil/${id} ||${frontURL}/walker/perfil/`+id)
+    res.redirect('back')
     } catch (error) {
         console.log(error)
     }
