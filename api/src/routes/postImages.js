@@ -5,7 +5,7 @@ const multer = require ('multer');
 const  path  = require("path");
 const fs = require('fs-extra');
 require("dotenv").config();
-const frontURL = process.env.REACT_APP || "http://localhost:3000";
+const frontURL = process.env.REACT_APP 
 
 
 const router = Router();
