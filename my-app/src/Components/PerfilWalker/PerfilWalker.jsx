@@ -41,6 +41,7 @@ import styled from "styled-components";
 import Modal from "./Modal/Modal";
 import { useModal } from "./Modal/useModal";
 const frontURL = process.env.REACT_APP || "http://localhost:3000";
+const baseURL = process.env.REACT_APP_API || "http://localhost:3001";
 dotenv.config();
 
 // import Footer from './footer/Footer';
@@ -65,8 +66,6 @@ const PerfilWalker = () => {
   const preferencias = useSelector((state) => state.preferencias);
   const [ordenload, setOrdenLoad] = useState(false);
   const [delImage, setDelImage] = useState(false);
-  const baseURL = process.env.REACT_APP_API || "http://localhost:3001";
-  const frontURL = process.env.REACT_APP || "http://localhost:3000";
 
   useEffect(() => {
     dispatch(getPreferences(id, token));
